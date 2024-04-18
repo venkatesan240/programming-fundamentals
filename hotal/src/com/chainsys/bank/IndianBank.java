@@ -30,7 +30,7 @@ public class IndianBank {
 		bank.setAccountNumber(accountnumber);
 		
 		String ifsccode;
-		String ifscpattern="[A-Z0-9]{5-12}";
+		String ifscpattern="[A-Z0-9]{5,12}";
 		while(true) {
 			System.out.println("Enter the ifsc code");
 			ifsccode=scan.next();
@@ -41,7 +41,7 @@ public class IndianBank {
 			System.out.println("invalid input");
 		}
 		while(true) {
-			String branchPattern="[a-z]{1}";
+			String branchPattern="[a-z]{3,20}";
 			System.out.println("Enter the branch name:");
 			String branch=scan.next();
 			if(branch.matches(branchPattern)) {
