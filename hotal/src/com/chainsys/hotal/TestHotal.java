@@ -47,6 +47,6 @@ public class TestHotal {
 		System.out.println(hotal.getLocation());
 		System.out.println(hotal.getPhoneNumber());
 		System.out.println(hotal.toString());
+		scan.close();
 	}
-
 }

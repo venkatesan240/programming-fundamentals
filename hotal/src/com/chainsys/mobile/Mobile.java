@@ -2,6 +2,7 @@ package com.chainsys.mobile;
 
 public class Mobile {
 
+	int id;
 	String brand;
 	String processor;
 	String model;

@@ -87,12 +87,12 @@ public class IndianBank {
 	public void showAvailableSavingPlan() {
 		System.out.println("savings plans...");
 		System.out.println("Individual – Single Accounts");
-			System.out.println("Two or more individuals – Joint Accounts");	
-				System.out.println("Illiterate persons");
-				System.out.println("Blind persons");
-				System.out.println("Associations, Clubs."); 
-				System.out.println("Trusts"); 
-				System.out.println("Institutions/Agencies/ Societies/Government Departments specially permitted by RBI.");
+		System.out.println("Two or more individuals – Joint Accounts");	
+		System.out.println("Illiterate persons");
+		System.out.println("Blind persons");
+		System.out.println("Associations, Clubs."); 
+		System.out.println("Trusts"); 
+		System.out.println("Institutions/Agencies/ Societies/Government Departments specially permitted by RBI.");
 	}
 
 }

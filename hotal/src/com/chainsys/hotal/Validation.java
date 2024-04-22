@@ -16,7 +16,6 @@ public class Validation {
 			return false;
 		}
 			return true;
-		
 	}
 	
 	public boolean cheakFloat(float number) {

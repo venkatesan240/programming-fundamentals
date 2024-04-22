@@ -18,9 +18,7 @@ public class Bank {
 	public Bank() {
 		
 	}
-	
 	public Bank(String userName, int accountNumber, String ifscCode, String branch, long phoneNumber, int account) {
-		super();
 		this.userName = userName;
 		this.accountNumber = accountNumber;
 		this.ifscCode = ifscCode;
