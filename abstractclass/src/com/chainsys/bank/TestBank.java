@@ -9,6 +9,7 @@ public class TestBank {
 		
 		SbiBank sbibank=new SbiBank();
 		sbibank.interestRate((float) 0.05);
+		sbibank.loans();
 		
 		IndianBank indianbank=new IndianBank();
 		indianbank.interestRate((float) 0.07);
