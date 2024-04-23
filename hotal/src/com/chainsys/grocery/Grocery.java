@@ -8,6 +8,7 @@ public class Grocery {
 	int quantity[]=new int[100];
 	int amount[]=new int[100];
 	String product[]=new String[100];
+	int price[]=new int[100];
 	int totalamount;
 	
 	public Grocery() {
@@ -65,10 +66,6 @@ public class Grocery {
 	public void setId(int id) {
 		this.id = id;
 	}
-
-	
-
-	
 
 	@Override
 	public String toString() {

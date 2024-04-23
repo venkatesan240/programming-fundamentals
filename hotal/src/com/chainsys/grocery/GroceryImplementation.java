@@ -20,6 +20,7 @@ public class GroceryImplementation {
 			if(validate.Numbers(quantity)) {
 				grocery.product[i]=product;
 				grocery.quantity[i]=quantity;
+				grocery.price[i]=price;
 				int amount=quantity*price;
 				grocery.amount[i]=amount;
 				System.out.println("amount for "+product+" is:"+amount);
@@ -33,13 +34,15 @@ public class GroceryImplementation {
 	}
 
 	public void getBill() {
-		System.out.println("product   quantity   price");
+		System.out.println("**********************************");
+		System.out.println("product   price   quantity   price");
+		System.out.println("**********************************");
 		for(int j=0;j<i;j++) {
-			System.out.println(grocery.product[j]+"     "+grocery.quantity[j]+"     "+grocery.amount[j]);
+			System.out.println(grocery.product[j]+"       "+grocery.price[j]+"      "+grocery.quantity[j]+"       "+grocery.amount[j]);
 		}
-		System.out.println("******************");
-		System.out.println("Total amount : "+grocery.getTotalamount());
-		System.out.println("******************");
+		System.out.println("**********************************");
+		System.out.println("Total amount :                "+grocery.getTotalamount());
+		System.out.println("**********************************");
 	}
 	
 		public void dryFruits() {
