@@ -1,6 +1,6 @@
 package com.chainsys.Mobile;
 
-public class Samsung implements Mobile{
+public  class Samsung implements Mobile{
 
 
 	@Override
@@ -13,6 +13,18 @@ public class Samsung implements Mobile{
 	public void model() {
 		// TODO Auto-generated method stub
 		System.out.println("S24");
+	}
+
+	@Override
+	public void ram() {
+		// TODO Auto-generated method stub
+		System.out.println("16gb");
+	}
+
+	@Override
+	public void price() {
+		// TODO Auto-generated method stub
+		System.out.println("price of samsung S24 is 24000");
 	}
 
 }

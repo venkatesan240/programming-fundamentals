@@ -8,10 +8,12 @@ public class TestMobile {
 		Samsung samsung=new Samsung();
 		samsung.model();
 		samsung.processor();
+		samsung.ram();
 		
 		Vivo vivo=new Vivo();
 		vivo.model();
 		vivo.processor();
+		samsung.ram();
 	}
 
 }
