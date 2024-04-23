@@ -1,38 +1,82 @@
 package com.chainsys.grocery;
 
+import java.util.Arrays;
+
 public class Grocery {
 	
 	int id;
-	int quantity;
-	int amount;
+	int quantity[]=new int[100];
+	int amount[]=new int[100];
+	String product[]=new String[100];
+	int totalamount;
 	
 	public Grocery() {
 		
 	}
-	public Grocery(int id, String item, int quantity, int amount, float discount) {
-		this.id = id;
-		this.quantity = quantity;
-		this.amount = amount;
-	}
+
 	public int getId() {
 		return id;
 	}
+
+	
+
+	public int getTotalamount() {
+		return totalamount;
+	}
+
+	public void setTotalamount(int totalamount) {
+		this.totalamount = totalamount;
+	}
+
+	public int[] getQuantity() {
+		return quantity;
+	}
+
+	public void setQuantity(int[] quantity) {
+		this.quantity = quantity;
+	}
+
+	public String[] getProduct() {
+		return product;
+	}
+
+	public void setProduct(String[] product) {
+		this.product= product;
+	}
+
+	
+
+	public Grocery(int id, int[] quantity, int[] amount, String[] product) {
+		super();
+		this.id = id;
+		this.quantity = quantity;
+		this.amount = amount;
+		this.product = product;
+	}
+
+	public int[] getAmount() {
+		return amount;
+	}
+
+	public void setAmount(int[] amount) {
+		this.amount = amount;
+	}
+
 	public void setId(int id) {
 		this.id = id;
 	}
+
 	
-	public int getQuantity() {
-		return quantity;
+
+	
+
+	@Override
+	public String toString() {
+		return "Grocery [id=" + id + ", quantity=" + quantity + ", amount=" + amount + "]";
 	}
-	public void setQuantity(int quantity) {
-		this.quantity = quantity;
-	}
-	public int getAmount() {
-		return amount;
-	}
-	public void setAmount(int amount) {
-		this.amount = amount;
-	}
+
+	
+	
 	
 	
 }
