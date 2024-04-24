@@ -15,22 +15,22 @@ public class GroceryTest {
 		choice=scan.nextInt();
 		switch(choice) {
 		case 1:
-			grocery.dryFruits();
+			grocery.getDryFruits();
 			break;
 		case 2:
-			grocery.snacks();
+			grocery.getSnacks();
 			break;
 		case 3:
-			grocery.cookingOil();
+			grocery.getCookingOil();
 			break;
 		case 4:
-			grocery.beverages();
+			grocery.getBeverages();
 			break;
 		case 5:
-			grocery.spices();
+			grocery.getSpices();
 			break;
 		case 6:
-			grocery.rices();
+			grocery.getRices();
 			break;
 		default :
 			System.out.println("please enter 1 to 6");

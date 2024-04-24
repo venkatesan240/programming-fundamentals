@@ -80,7 +80,7 @@ public class GroceryImplementation {
 		System.out.println("please enter 1 to 6");
 	}
 	
-		public void dryFruits() {
+		public void getDryFruits() {
 			
 			do {
 				System.out.println("1.almont(40Rs)");
@@ -102,7 +102,7 @@ public class GroceryImplementation {
 			}while(choice!=4);
 		}
 		
-		public void snacks() {
+		public void getSnacks() {
 			do {
 				System.out.println("1.kurkura(20Rs)");
 				System.out.println("2.lays(20Rs)");
@@ -127,7 +127,7 @@ public class GroceryImplementation {
 			}while(choice!=5);
 		}
 
-		public void cookingOil() {
+		public void getCookingOil() {
 			do {
 				System.out.println("1.sunflower(150Rs)");
 				System.out.println("2.fortuner(100Rs)");
@@ -148,7 +148,7 @@ public class GroceryImplementation {
 			}while(choice!=4);
 		}
 
-		public void beverages() {
+		public void getBeverages() {
 			do {
 				System.out.println("1.coco cola(40Rs)");
 				System.out.println("2.pepsi(50Rs)");
@@ -173,7 +173,7 @@ public class GroceryImplementation {
 			}while(choice!=5);
 		}
 		
-		public void spices() {
+		public void getSpices() {
 			do {
 				System.out.println("1.mutton masala(20Rs)");
 				System.out.println("2.chicken 65 masala(10Rs)");
@@ -198,7 +198,7 @@ public class GroceryImplementation {
 			}while(choice!=5);
 		}
 		
-		public void rices() {
+		public void getRices() {
 			do {
 				System.out.println("1.Basmathi rice(1kg 70rs)");
 				System.out.println("2.white  rice(1kg 50)");
