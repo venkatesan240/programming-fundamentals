@@ -11,16 +11,8 @@ public class GroceryTest {
 		GroceryImplementation grocery=new GroceryImplementation();
 		System.out.println("welcome to grocery shop");
 		do {
-		System.out.println("select products...");
-		System.out.println("1.dry fruits");
-		System.out.println("2.snacks");
-		System.out.println("3.cooking oil");
-		System.out.println("4.beverages");
-		System.out.println("5.spices");
-		System.out.println("6.exit");
-		System.out.println("please enter 1 to 5");
+		grocery.productList();
 		choice=scan.nextInt();
-		if(choice<6) {
 		switch(choice) {
 		case 1:
 			grocery.dryFruits();
@@ -38,16 +30,18 @@ public class GroceryTest {
 			grocery.spices();
 			break;
 		case 6:
+			grocery.rices();
 			break;
-		}
-		}
-		else {
-			System.out.println("please enter between 1 to 6");
+		default :
+			System.out.println("please enter 1 to 6");
+			break;
 		}
 		System.out.println("do you want to buy any other products(y/n)");
 		buy=scan.next().charAt(0);
 		}while(buy == 'y');
 		grocery.getBill();
+		grocery.makePayment();
+		scan.close();
 	}
 
 }

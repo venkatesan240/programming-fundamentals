@@ -1,25 +1,23 @@
 package com.chainsys.grocery;
 
-import java.util.Arrays;
-
 public class Grocery {
-	
+
 	int id;
 	int quantity[]=new int[100];
 	int amount[]=new int[100];
 	String product[]=new String[100];
 	int price[]=new int[100];
 	int totalamount;
-	
+
 	public Grocery() {
-		
+
 	}
 
 	public int getId() {
 		return id;
 	}
 
-	
+
 
 	public int getTotalamount() {
 		return totalamount;
@@ -45,7 +43,7 @@ public class Grocery {
 		this.product= product;
 	}
 
-	
+
 
 	public Grocery(int id, int[] quantity, int[] amount, String[] product) {
 		super();
@@ -72,8 +70,8 @@ public class Grocery {
 		return "Grocery [id=" + id + ", quantity=" + quantity + ", amount=" + amount + "]";
 	}
 
-	
-	
-	
-	
+
+
+
+
 }

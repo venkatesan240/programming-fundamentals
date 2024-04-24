@@ -12,7 +12,7 @@ public class GroceryImplementation {
 	int choice,i=0;
 	
 	public void priceCalculator(String product,int price) {
-		//System.out.println("price of "+product+"(Rs."+price+")");
+		
 		//System.out.println("Available Stock :"+ stock);
 		while(true) {
 			System.out.println("Enter quantity:");
@@ -35,14 +35,50 @@ public class GroceryImplementation {
 
 	public void getBill() {
 		System.out.println("**********************************");
-		System.out.println("product   price   quantity   price");
+		System.out.println("             BILL                 ");
+		System.out.println("        SRINIVASA AGENCY          ");
+		System.out.println("**********************************");
+		System.out.println("product   price   quantity    price");
 		System.out.println("**********************************");
 		for(int j=0;j<i;j++) {
-			System.out.println(grocery.product[j]+"       "+grocery.price[j]+"      "+grocery.quantity[j]+"       "+grocery.amount[j]);
+			System.out.println(grocery.product[j]+"       "+grocery.price[j]+"       "+grocery.quantity[j]+"       "+grocery.amount[j]);
 		}
 		System.out.println("**********************************");
 		System.out.println("Total amount :                "+grocery.getTotalamount());
 		System.out.println("**********************************");
+	}
+	
+	public void makePayment() {
+		System.out.println("enter payment mode:");
+		System.out.println("1.online");
+		System.out.println("2.cash on delivery");
+		choice=scan.nextInt();
+		switch(choice) {
+		case 1:
+			while(true) {
+			System.out.println("enter the online payment mode(upi/credit/debit)");
+			String payment=scan.next();
+			if(payment.equals("upi") || payment.equals("credit") || payment.equals("debit")) {
+				System.out.println("payment sucessfull...");
+				break;
+			}else {
+				System.out.println("please enter valid input");
+			}
+			}
+			break;
+		case 2:
+			System.out.println("your product will delivered at tomorrow");
+			break;
+		}
+	}
+	public void productList() {
+		System.out.println("1.dry fruits");
+		System.out.println("2.snacks");
+		System.out.println("3.cookingOil");
+		System.out.println("4.beverages");
+		System.out.println("5.spices");
+		System.out.println("6.rices");
+		System.out.println("please enter 1 to 6");
 	}
 	
 		public void dryFruits() {
@@ -140,27 +176,48 @@ public class GroceryImplementation {
 		
 		public void spices() {
 			do {
-			System.out.println("1.mutton masala(10Rs)");
-			System.out.println("2.chicken masala(10Rs)");
-			System.out.println("3.panner masala(20Rs)");
-			System.out.println("4.fish masala(10Rs)");
-			System.out.println("5.exit");
-			choice=scan.nextInt();
-			switch(choice) {
-			case 1:
-				priceCalculator("mutton masala",10);
-				break;
-			case 2:
-				priceCalculator("chicken masala",10);
-				break;
-			case 3:
-				priceCalculator("panner masala",20);
-				break;
-			case 4:
-				priceCalculator("fish masala",10);
-				break;
-			}
+				System.out.println("1.mutton masala(20Rs)");
+				System.out.println("2.chicken 65 masala(10Rs)");
+				System.out.println("3.aachi masala(20Rs)");
+				System.out.println("4.fish fry masala(10Rs)");
+				System.out.println("5.exit");
+				choice=scan.nextInt();
+				switch(choice) {
+				case 1:
+					priceCalculator("mutton masala",10);
+					break;
+				case 2:
+					priceCalculator("chicken masala",10);
+					break;
+				case 3:
+					priceCalculator("panner masala",20);
+					break;
+				case 4:
+					priceCalculator("fish masala",10);
+					break;
+				}
 			}while(choice!=5);
+		}
+		
+		public void rices() {
+			do {
+				System.out.println("1.Basmathi rice(1kg 70rs)");
+				System.out.println("2.white  rice(1kg 50)");
+				System.out.println("3.brown rice(1kg 80rs)");
+				System.out.println("4.exit");
+				choice=scan.nextInt();
+				switch(choice) {
+				case 1:
+					priceCalculator("Basmathi rice",70);
+					break;
+				case 2:
+					priceCalculator("white rice",50);
+					break;
+				case 3:
+					priceCalculator("brown rice",80);
+					break;
+				}
+			}while(choice!=4);
 		}
 
 }
