@@ -35,8 +35,7 @@ public class GroceryImplementation {
 
 	public void getBill() {
 		System.out.println("**********************************");
-		System.out.println("             BILL                 ");
-		System.out.println("        SRINIVASA AGENCY          ");
+		System.out.println("       Venkatesh AGENCY          ");
 		System.out.println("**********************************");
 		System.out.println("product   price   quantity    price");
 		System.out.println("**********************************");
