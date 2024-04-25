@@ -8,8 +8,9 @@ public class GroceryImplementation {
 	Scanner scan=new Scanner(System.in);
 	int quantity,amount,totalAmount=0;
 	Grocery grocery=new Grocery();
+	UserRegister userregister=new UserRegister();
 	Validation validate=new Validation();
-	int choice,i=0;
+	int choice,i=0,j=0;
 	
 	public void priceCalculator(String product,int price) {
 		
@@ -32,12 +33,73 @@ public class GroceryImplementation {
 			}
 		}
 	}
+	
+	public void getDetails() {
+		//GroceryTest test  = new GroceryTest();
+		System.out.println("USER REGISTOR");
+		System.out.println("-------------");
+		while(true) {
+			System.out.println("enter your name:");
+			String name=scan.next();
+			if(name.matches("[a-zA-Z]{2,15}")) {
+				userregister.setName(name);
+				break;
+			}
+			System.out.println("invalid name");
+		}
+		while(true) {
+			System.out.println("create password:");
+			String password=scan.next();
+			if(password.matches("[a-zA-z0-9@#]{3,10}")) {
+				userregister.setPassword(password);
+				System.out.println("Registered Sucessfully");
+				break;
+			}
+			System.out.println("invalid password");
+		}
+        GroceryTest.userCredentialsList.add(new UserRegister(j++,userregister.getName(), userregister.getPassword()));
+
+		
+	}
+	
+	public boolean loginCredencial() {
+	    System.out.println("TO LOGIN");
+	    System.out.println("--------");
+	    
+	    while(true) {
+	        System.out.println("Enter userName:");
+	        String username = scan.next();
+	        
+	        boolean userFound = false;
+	        
+	        for(UserRegister user : GroceryTest.userCredentialsList) {
+	            if(username.equals(user.getName())) {
+	                userFound = true;
+	                
+	                while(true) {
+	                    System.out.println("Enter password:");
+	                    String password = scan.next();
+	                    
+	                    if(password.equals(user.getPassword())) {
+	                        return true; // Login successful
+	                    } else {
+	                        System.out.println("Invalid password. Please enter the correct password.");
+	                    }
+	                }
+	            }
+	        }
+	        
+	        if(!userFound) {
+	            System.out.println("Invalid username. Please enter the correct username.");
+	        }
+	    }
+	}
 
 	public void getBill() {
 		System.out.println("**********************************");
 		System.out.println("       Venkatesh AGENCY          ");
 		System.out.println("**********************************");
-		System.out.println("product   price   quantity    price");
+		System.out.println("product   price   quantity    amount");
 		System.out.println("**********************************");
 		for(int j=0;j<i;j++) {
 			System.out.println(grocery.product[j]+"       "+grocery.price[j]+"       "+grocery.quantity[j]+"       "+grocery.amount[j]);
@@ -77,7 +139,34 @@ public class GroceryImplementation {
 		System.out.println("4.beverages");
 		System.out.println("5.spices");
 		System.out.println("6.rices");
+		System.out.println("7.biscuits");
 		System.out.println("please enter 1 to 6");
+	}
+	
+	
+	public void getBiscuit() {
+		do {
+			System.out.println("1.milkbiscuit(30 rs)");
+			System.out.println("2.marrygold(30rs)");
+			System.out.println("3.darkfantasy(40rs)");
+			System.out.println("4.bourbon(30rs)");
+			System.out.println("5.exit");
+			choice=scan.nextInt();
+			switch(choice) {
+			case 1:
+				priceCalculator("milkbiscuit",30);
+				break;
+			case 2:
+				priceCalculator("marrygold",30);
+				break;
+			case 3:
+				priceCalculator("darkfantasy",40);
+				break;
+			case 4:
+				priceCalculator("bourbon",30);
+				break;
+			}
+		}while(choice!=5);
 	}
 	
 		public void getDryFruits() {
