@@ -5,6 +5,8 @@ public class UserRegister {
 	int userid;
 	String name;
 	String password;
+	String address;
+	String mobile;
 	public int getUserid() {
 		return userid;
 	}
@@ -22,6 +24,19 @@ public class UserRegister {
 	}
 	public void setPassword(String password) {
 		this.password = password;
+	}
+	
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public String getMobile() {
+		return mobile;
+	}
+	public void setMobile(String mobile) {
+		this.mobile = mobile;
 	}
 	public UserRegister(int userid, String name, String password) {
 		super();

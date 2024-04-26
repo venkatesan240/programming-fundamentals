@@ -47,13 +47,14 @@ public class GroceryTest {
 						grocery.getBiscuit();
 						break;
 					default :
-						System.out.println("please enter 1 to 6");
+						System.out.println("please enter 1 to 7");
 						break;
 					}
 					System.out.println("do you want to buy any other products(y/n):");
 					buy=scan.next().charAt(0);
 				}while(buy == 'y');
 				grocery.getBill();
+				grocery.getDiscount();
 				grocery.makePayment();
 				scan.close();
 			}
@@ -93,6 +94,7 @@ public class GroceryTest {
 					buy=scan.next().charAt(0);
 				}while(buy == 'y');
 				grocery.getBill();
+				grocery.getDiscount();
 				grocery.makePayment();
 				scan.close();
 			}

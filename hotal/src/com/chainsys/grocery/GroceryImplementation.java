@@ -34,6 +34,18 @@ public class GroceryImplementation {
 		}
 	}
 	
+	public void getDiscount() {
+		double discount;
+		int totalamount=grocery.getTotalamount();
+		if(totalamount>500) {
+			discount=totalamount*0.1;
+			System.out.println("after discount price:"+(totalamount-discount));
+		}else if(totalamount>1000) {
+			discount=totalamount*0.2;
+			System.out.println("after discount price:"+(totalamount-discount));
+		}
+	}
+	
 	public void getDetails() {
 		//GroceryTest test  = new GroceryTest();
 		System.out.println("USER REGISTOR");
@@ -97,7 +109,7 @@ public class GroceryImplementation {
 
 	public void getBill() {
 		System.out.println("**********************************");
-		System.out.println("       Venkatesh AGENCY          ");
+		System.out.println("       VENKATESAN AGENCY          ");
 		System.out.println("**********************************");
 		System.out.println("product   price   quantity    amount");
 		System.out.println("**********************************");
@@ -128,7 +140,25 @@ public class GroceryImplementation {
 			}
 			break;
 		case 2:
-			System.out.println("your product will delivered at tomorrow");
+			while(true) {
+				System.out.println("Enter your address:");
+				String address=scan.next();
+				if(address.matches("[a-zA-Z]{3,15}")) {
+					userregister.setAddress(address);
+					break;
+				}
+				System.out.println("please enter valid address");
+			}
+			while(true) {
+				System.out.println("Enter the mobile:");
+				String mobile=scan.next();
+				if(mobile.matches("[0-9]{10}")) {
+					userregister.setMobile(mobile);
+					System.out.println("your product will delivered at tomorrow");
+					break;
+				}
+				System.out.println("please enter valid mobile");
+			}
 			break;
 		}
 	}
