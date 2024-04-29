@@ -8,9 +8,10 @@ public class GroceryImplementation {
 	Scanner scan=new Scanner(System.in);
 	int quantity,amount,totalAmount=0;
 	Grocery grocery=new Grocery();
-	UserRegister userregister=new UserRegister();
+	AbtractImplementation ai=new AbtractImplementation();
+	InterfaceImplementaion ii=new InterfaceImplementaion();
 	Validation validate=new Validation();
-	int choice,i=0,j=0;
+	int choice,i=0;
 	
 	public void priceCalculator(String product,int price) {
 		
@@ -48,30 +49,7 @@ public class GroceryImplementation {
 	
 	public void getDetails() {
 		//GroceryTest test  = new GroceryTest();
-		System.out.println("USER REGISTOR");
-		System.out.println("-------------");
-		while(true) {
-			System.out.println("enter your name:");
-			String name=scan.next();
-			if(name.matches("[a-zA-Z]{2,15}")) {
-				userregister.setName(name);
-				break;
-			}
-			System.out.println("invalid name");
-		}
-		while(true) {
-			System.out.println("create password:");
-			String password=scan.next();
-			if(password.matches("[a-zA-z0-9@#]{3,10}")) {
-				userregister.setPassword(password);
-				System.out.println("Registered Sucessfully");
-				break;
-			}
-			System.out.println("invalid password");
-		}
-        GroceryTest.userCredentialsList.add(new UserRegister(j++,userregister.getName(), userregister.getPassword()));
-
-		
+		ii.loginCredencials();
 	}
 	
 	public boolean loginCredencial() {
@@ -140,25 +118,7 @@ public class GroceryImplementation {
 			}
 			break;
 		case 2:
-			while(true) {
-				System.out.println("Enter your address:");
-				String address=scan.next();
-				if(address.matches("[a-zA-Z]{3,15}")) {
-					userregister.setAddress(address);
-					break;
-				}
-				System.out.println("please enter valid address");
-			}
-			while(true) {
-				System.out.println("Enter the mobile:");
-				String mobile=scan.next();
-				if(mobile.matches("[0-9]{10}")) {
-					userregister.setMobile(mobile);
-					System.out.println("your product will delivered at tomorrow");
-					break;
-				}
-				System.out.println("please enter valid mobile");
-			}
+			ai.getDetails();
 			break;
 		}
 	}
