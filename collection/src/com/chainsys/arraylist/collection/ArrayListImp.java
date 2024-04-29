@@ -1,6 +1,7 @@
 package com.chainsys.arraylist.collection;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class ArrayListImp {
 
@@ -13,6 +14,10 @@ public class ArrayListImp {
 		al.add("hello");
 		al.add("hello");
 		System.out.println(al);
+		Iterator itr=al.iterator();
+		while(itr.hasNext()) {
+			System.out.println(itr.next());
+		}
 		
 	}
 
