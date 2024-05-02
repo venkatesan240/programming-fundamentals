@@ -90,9 +90,9 @@ public class HotalImpl {
 		// TODO Auto-generated method stub
 		TestHotal th=new TestHotal();
 		Crud crud=new Crud();
-		crud.getHotalDetails();
-		crud.insert();
-		//crud.getDetails();
+		//crud.getHotalDetails();
+		//crud.insert();
+		crud.getDetails();
 		//crud.update();
 		//crud.delete();
 		
